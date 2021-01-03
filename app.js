@@ -27,7 +27,7 @@ mongoose.set('useUnifiedTopology', true);
 
 mongoose
   .connect(
-      "mongodb+srv://SAURABH:zzqP7ChJTqESP4lW@cluster0.06klg.mongodb.net/baraut-food-corner-uat?retryWrites=true&w=majority"     )
+      "mongodb+srv://SAURABH:zzqP7ChJTqESP4lW@cluster0.06klg.mongodb.net/baraut-food-corner?retryWrites=true&w=majority"     )
   .then(() => {
     console.log("Connected to database!");
     console.log("current server time:"+new Date().toISOString())
