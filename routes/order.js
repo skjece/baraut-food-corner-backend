@@ -59,12 +59,12 @@ router.post("/add",checkToken,(req,res,next)=>{
       key_list_user="{#DD#}|{#BB#}|{#FF#}";
 
       let sms_req=common_lib.createSendSMSRequest(msisdn_list_user,key_list_user,value_list_user,template_id_user);
-      // sms_req.then((resp)=>{
-      //   console.log("resp:"+JSON.stringify(resp))
-      // })
-      // .catch(err=>{
-      //   console.log("err:"+JSON.stringify(err))
-      // })
+      sms_req.then((resp)=>{
+        console.log("resp:"+JSON.stringify(resp))
+      })
+      .catch(err=>{
+        console.log("err:"+JSON.stringify(err))
+      })
 
       //sending SMS to Merchant
       template_id_merch=42426; //to merchant order received
@@ -75,12 +75,12 @@ router.post("/add",checkToken,(req,res,next)=>{
 
       let sms_req_merch=common_lib.createSendSMSRequest(msisdn_list_merch,key_list_merch,value_list_merch,template_id_merch);
 
-      // sms_req_merch.then((resp)=>{
-      //   console.log("resp:"+JSON.stringify(resp))
-      // })
-      // .catch(err=>{
-      //   console.log("err:"+JSON.stringify(err))
-      // })
+      sms_req_merch.then((resp)=>{
+        console.log("resp:"+JSON.stringify(resp))
+      })
+      .catch(err=>{
+        console.log("err:"+JSON.stringify(err))
+      })
 
       //sms sending done
       return;
